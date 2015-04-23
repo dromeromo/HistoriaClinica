@@ -1,0 +1,2 @@
+# HistoriaClinica
+proyecto historia clinica
