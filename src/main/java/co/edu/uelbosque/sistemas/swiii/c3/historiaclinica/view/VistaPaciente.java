@@ -36,6 +36,7 @@ public class VistaPaciente implements Serializable {
         salvarPaciente();
     }
 
+
     public void cerroTab(TabCloseEvent event) {
         salvarPaciente();
     }
@@ -43,6 +44,7 @@ public class VistaPaciente implements Serializable {
     private void salvarPaciente() {
 
         sp.getRp().save(paciente);
+        
     }
 
     /**
@@ -79,8 +81,7 @@ public class VistaPaciente implements Serializable {
         this.sp = ServiciosDeAplicacionSpring.getServiciosDeAplicacionSpring().getServicioPaciente(name);
     }
 
-    public void actualizarFechaNacimiento(AjaxBehaviorEvent event) {
-        
+    public void actualizarFechaNacimiento(AjaxBehaviorEvent event) {        
         Calendar calendar =  (Calendar) event.getSource();
         Date d=(Date)calendar.getLocalValue();
         paciente.setFechaNacimiento(d);

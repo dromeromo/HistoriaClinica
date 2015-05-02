@@ -7,6 +7,7 @@ package co.edu.uelbosque.sistemas.swiii.c3.historiaclinica.config;
 
 import co.edu.uelbosque.sistemas.swiii.c3.historiaclinica.entities.Paciente;
 import co.edu.uelbosque.sistemas.swiii.c3.historiaclinica.entities.Raza;
+import co.edu.uelbosque.sistemas.swiii.c3.historiaclinica.services.ServicioPacienteInt;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -17,6 +18,7 @@ import org.testng.annotations.Test;
  * @author Andres
  */
 public class AnotacionPropia {
+    private transient ServicioPacienteInt sp;
 
     @Test
     public void pruebaPaciente() {
@@ -61,5 +63,6 @@ public class AnotacionPropia {
     public @interface ordenarPacientes {
 
     }
+    
 
 }

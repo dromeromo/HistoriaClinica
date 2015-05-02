@@ -87,6 +87,9 @@ public class Paciente implements Serializable {
     }
 
     public void setEdad(Integer edad) {
+        Calendar x = Calendar.getInstance();
+        x.add(Calendar.YEAR,-1 * edad);
+        this.nacimiento = x;
         this.edad = edad;
     }
 
@@ -116,8 +119,10 @@ public class Paciente implements Serializable {
         long dias = hoy - nacimiento.getTimeInMillis();
         Duration d = new Duration(dias);
         this.dias = (int) d.getStandardDays();
+        Period period2 = new Period(nacimiento.getTimeInMillis(),hoy,PeriodType.years());
         Period period = new Period(nacimiento.getTimeInMillis(), hoy, PeriodType.months());
         this.meses = period.getMonths();
+        this.edad=period2.getYears();
         this.nacimiento = nacimiento;
     }
 
