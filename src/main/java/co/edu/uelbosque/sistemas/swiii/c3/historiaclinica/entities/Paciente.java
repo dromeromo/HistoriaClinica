@@ -48,6 +48,7 @@ public class Paciente implements Serializable {
     Integer meses;
     Integer dias;
     Integer edad;
+    Integer peso;
 
     private transient Calendar nacimiento;
 
@@ -178,5 +179,20 @@ public class Paciente implements Serializable {
         this.setNacimiento(x);
         this.fechaNacimiento = this.nacimiento.getTime();
     }
+
+    public Integer getPeso() {
+        return peso;
+    }
+
+    public void setPeso(Integer peso) {
+        this.peso = peso;
+    }
+
+
+    
+    
+    
+    
+    
 
 }

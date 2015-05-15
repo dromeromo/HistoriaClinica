@@ -13,6 +13,7 @@ import co.edu.uelbosque.sistemas.swiii.c3.historiaclinica.entities.Raza;
 import co.edu.uelbosque.sistemas.swiii.c3.historiaclinica.services.ServicioPacienteInt;
 import co.edu.uelbosque.sistemas.swiii.c3.historiaclinica.services.ServiciosDeAplicacionSpring;
 import java.util.Date;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.bean.SessionScoped;
 import javax.faces.event.AjaxBehaviorEvent;
@@ -30,6 +31,8 @@ public class VistaPaciente implements Serializable {
 
     @ManagedProperty(value = "#{paciente}")
     private Paciente paciente;
+
+    
 
     private transient ServicioPacienteInt sp;
 
